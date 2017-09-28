@@ -1,6 +1,7 @@
 # prometheus-protobuf-servlet
 
 [![Build Status](https://img.shields.io/travis/nolequen/prometheus-protobuf-servlet.svg?branch=master)](https://travis-ci.org/nolequen/prometheus-protobuf-servlet)
+[![Maven Central](https://img.shields.io/maven-central/v/su.nlq/prometheus-protobuf-servlet.svg)](https://maven-badges.herokuapp.com/maven-central/su.nlq/prometheus-protobuf-servlet)
 [![Dependency Status](https://www.versioneye.com/user/projects/59cb9c0b6725bd11fffde5d3/badge.svg)](https://www.versioneye.com/user/projects/59cb9c0b6725bd11fffde5d3)
 [![Codebeat](https://codebeat.co/badges/9086adaa-3c9d-4c3a-81cc-9bcf1a4bddc0)](https://codebeat.co/projects/github-com-nolequen-prometheus-protobuf-servlet-master)
 
@@ -9,6 +10,22 @@
 Currently only [Gauge](https://prometheus.io/docs/concepts/metric_types/#gauge) and [Counter](https://prometheus.io/docs/concepts/metric_types/#counter) collectors are supported.
 
 ### Usage
+
+You can find latest release on Maven Central.
+
+* Maven:
+```xml
+<dependency>
+  <groupId>su.nlq</groupId>
+  <artifactId>prometheus-protobuf-servlet</artifactId>
+  <version>0.1</version>
+</dependency>
+```
+
+* Gradle:
+```groovy
+compile group: 'su.nlq', name: 'prometheus-protobuf-servlet', version: '0.1'
+```
 
 The simple way to expose the metrics used in your code using Protobuf format is to add `ProtobufMetricsServlet` to your HTTP server.
 For example, you may do it with [Jetty](https://www.eclipse.org/jetty/) server:

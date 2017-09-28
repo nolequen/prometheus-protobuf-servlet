@@ -3,3 +3,4 @@ gradle/
 
 *.iml
 gradlew*
+gradle.properties

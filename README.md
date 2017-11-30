@@ -7,8 +7,6 @@
 
 [Protobuf](https://prometheus.io/docs/instrumenting/exposition_formats/) exposition format support for [Prometheus](https://prometheus.io/) client.
 
-Currently only [Gauge](https://prometheus.io/docs/concepts/metric_types/#gauge) and [Counter](https://prometheus.io/docs/concepts/metric_types/#counter) collectors are supported.
-
 ### Usage
 
 You can find latest release on Maven Central.
@@ -18,13 +16,13 @@ You can find latest release on Maven Central.
 <dependency>
   <groupId>su.nlq</groupId>
   <artifactId>prometheus-protobuf-servlet</artifactId>
-  <version>0.1</version>
+  <version>0.3</version>
 </dependency>
 ```
 
 * Gradle:
 ```groovy
-compile group: 'su.nlq', name: 'prometheus-protobuf-servlet', version: '0.1'
+compile group: 'su.nlq', name: 'prometheus-protobuf-servlet', version: '0.3'
 ```
 
 The simple way to expose the metrics used in your code using Protobuf format is to add `ProtobufMetricsServlet` to your HTTP server.

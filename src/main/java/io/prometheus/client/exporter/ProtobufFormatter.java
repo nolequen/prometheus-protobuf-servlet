@@ -218,7 +218,7 @@ public final class ProtobufFormatter {
       builders.forEach((k, v) -> apply(v::build, k, lables.get(k)));
     }
 
-    protected abstract @NotNull ProtobufFormatter.Builders<T> createLabels();
+    protected abstract @NotNull Builders<T> createLabels();
   }
 
   private static final class SummaryConsumer extends GenericMetricsConsumer<SummaryConsumer.SummaryBuilder> {
@@ -228,7 +228,7 @@ public final class ProtobufFormatter {
     }
 
     @Override
-    protected @NotNull ProtobufFormatter.Builders<SummaryBuilder> createLabels() {
+    protected @NotNull Builders<SummaryBuilder> createLabels() {
       return new Builders<>(SummaryBuilder::new, "quantile");
     }
 
@@ -264,7 +264,7 @@ public final class ProtobufFormatter {
     }
 
     @Override
-    protected @NotNull ProtobufFormatter.Builders<HistogramBuilder> createLabels() {
+    protected @NotNull Builders<HistogramBuilder> createLabels() {
       return new Builders<>(HistogramBuilder::new, "le");
     }
 

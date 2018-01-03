@@ -4,6 +4,7 @@ version '0.1.0'
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'signing'
+apply plugin: 'jacoco'
 
 sourceCompatibility = 1.8
 
@@ -22,6 +23,23 @@ dependencies {
   testCompile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.8.v20171121'
   testCompile group: 'org.eclipse.jetty', name: 'jetty-client', version: '9.4.8.v20171121'
 }
+
+jacocoTestReport {
+  reports {
+    xml.enabled true
+    html.enabled false
+  }
+  afterEvaluate {
+    classDirectories = files(classDirectories.files.collect {
+      fileTree(dir: it, exclude: ['**/*Metrics**'])
+    })
+  }
+}
+
+check.dependsOn jacocoTestReport
+
+test.finalizedBy(project.tasks.jacocoTestReport)
+
 
 uploadArchives {
   repositories {

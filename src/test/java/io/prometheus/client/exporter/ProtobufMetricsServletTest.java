@@ -129,8 +129,8 @@ public final class ProtobufMetricsServletTest {
   public void all() throws Exception {
     metric(Counter::build, Counter.Child::inc).apply("test_counter");
     metric(Gauge::build, gauge -> gauge.set(random())).apply("test_gauge");
-    metric(Summary::build, summary -> summary.observe(random())).apply("test_summary");
-    metric(Histogram::build, histogram -> histogram.observe(random())).apply("test_histogram");
+    metric(ProtobufMetricsServletTest::summary, summary -> summary.observe(random())).apply("test_summary");
+    metric(ProtobufMetricsServletTest::histogram, histogram -> histogram.observe(random())).apply("test_histogram");
     verify(family -> { /* do nothing */ });
   }
 

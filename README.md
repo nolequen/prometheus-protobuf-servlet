@@ -17,13 +17,13 @@ You can find latest release on Maven Central.
 <dependency>
   <groupId>su.nlq</groupId>
   <artifactId>prometheus-protobuf-servlet</artifactId>
-  <version>0.4.0</version>
+  <version>0.5.0</version>
 </dependency>
 ```
 
 * Gradle:
 ```groovy
-compile group: 'su.nlq', name: 'prometheus-protobuf-servlet', version: '0.4.0'
+compile group: 'su.nlq', name: 'prometheus-protobuf-servlet', version: '0.5.0'
 ```
 
 The simple way to expose the metrics used in your code using Protobuf format is to add `ProtobufMetricsServlet` to your HTTP server.

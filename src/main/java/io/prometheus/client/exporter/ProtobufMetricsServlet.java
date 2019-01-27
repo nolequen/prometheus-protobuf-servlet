@@ -28,7 +28,7 @@ public final class ProtobufMetricsServlet extends HttpServlet {
   protected void doGet(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws IOException {
     response.setStatus(HttpServletResponse.SC_OK);
     response.setContentType(ProtobufFormatter.CONTENT_TYPE);
-    try (OutputStream output = response.getOutputStream()) {
+    try (final OutputStream output = response.getOutputStream()) {
       new ProtobufFormatter(registry.filteredMetricFamilySamples(names(request))).write(output);
       output.flush();
     }

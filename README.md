@@ -1,5 +1,8 @@
-# prometheus-protobuf-servlet
+# DEPRECATED
 
+The project is no longer supported due to [Prometheus no longer supports the Protobuf exposition format](https://github.com/prometheus/docs/issues/927).
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 [![Build Status](https://img.shields.io/travis/nolequen/prometheus-protobuf-servlet.svg?branch=master)](https://travis-ci.org/nolequen/prometheus-protobuf-servlet)
 [![Maven Central](https://img.shields.io/maven-central/v/su.nlq/prometheus-protobuf-servlet.svg)](https://maven-badges.herokuapp.com/maven-central/su.nlq/prometheus-protobuf-servlet)
 [![Codecov](https://codecov.io/gh/nolequen/prometheus-protobuf-servlet/branch/master/graph/badge.svg)](https://codecov.io/gh/nolequen/prometheus-protobuf-servlet)
